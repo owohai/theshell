@@ -1,6 +1,8 @@
 # theShell
 Desktop Environment written using the Qt toolkit
 
+## Copyright information:
+**theShell is owned and managed by [vicr123](https://github.com/vicr123/theshell). I do not manage nor own any of their property.**
 ## Screenshots
 ![Screenshot 1](https://raw.githubusercontent.com/vicr123/theshell/master/shell/images/desktop.png)
 
