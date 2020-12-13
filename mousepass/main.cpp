@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
         }
     } else if (removePass) {
         if (mousePassFile == "") {
-            std::cout << "Mouse password file not specified.\n";
+            std::cout << "No Mouse password file not specified.\n";
             return 1;
         }
 
