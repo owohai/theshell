@@ -26,7 +26,7 @@ ErrorDialog::ErrorDialog(bool started, int errorCount, QWidget *parent) :
     if (started) {
         if (errorCount >= 3) {
             ui->restartButton->setVisible(false);
-            ui->titleLabel->setText(tr("Unfortunately, theShell keeps running into errors."));
+            ui->titleLabel->setText(tr("Unfortunately, theShell keeps running into errors. Try to boot-up later."));
             ui->repeatFrame->setVisible(true);
             ui->errorLabel->setVisible(false);
             //ui->errorLabel->setText(tr("theShell keeps running into errors."));
@@ -91,7 +91,7 @@ void ErrorDialog::on_saveBacktraceButton_clicked()
 
 void ErrorDialog::on_resetTSButton_clicked()
 {
-    if (QMessageBox::warning(this, tr("Reset theShell?"), tr("You're about to reset theShell to its default state. Are you sure you wish to do this?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
+    if (QMessageBox::warning(this, tr("Format theShell?"), tr("You're about to format theShell to its default state. All plugged in drives and USB Sticks will also get formatted. Are you sure you wish to do this?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
         QSettings("theSuite", "theShell").clear();
 
         ui->resetTSButton->setEnabled(false);
